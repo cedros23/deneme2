@@ -26,6 +26,9 @@ jobs:
       image: barichello/godot-ci:4.0.3 # Remember to manually set image to this version.
 
     steps:
+      - name: Install sudo package
+        run: apt update && apt install sudo
+
       - name: Checkout
         uses: actions/checkout@v2
 
