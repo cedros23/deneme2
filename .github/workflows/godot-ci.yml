@@ -45,7 +45,7 @@ jobs:
       # Workaround for SharedArrayBuffer support on GitHub Pages
       # See: https://github.com/godotengine/godot-docs/issues/7084 # cd public/play
       - name: SharedArrayBuf
-        run: sudo apt install curl
+        run: sudo apt-get -y install curl
       - 
         name: SharedArrayBuf part II
         run: |
