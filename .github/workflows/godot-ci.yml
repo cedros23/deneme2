@@ -45,10 +45,11 @@ jobs:
       # Workaround for SharedArrayBuffer support on GitHub Pages
       # See: https://github.com/godotengine/godot-docs/issues/7084 # cd public/play
       - name: SharedArrayBuf
+        run: sudo apt install curl
+      - 
+        name: SharedArrayBuf part II
         run: |
-          ls -la
-          curl --version
-          sudo apt install curl
+          ls
           curl -fsSL https://github.com/gzuidhof/coi-serviceworker/raw/master/coi-serviceworker.js > coi-serviceworker.js
           sed -i 's#\(		<script src="index.js"></script>\)#		<script src="coi-serviceworker.js"></script>\n\1#g' index.html
 
